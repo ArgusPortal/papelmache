@@ -1,0 +1,5 @@
+runtime: java11
+entrypoint: java -jar target/papelmache-0.0.1-SNAPSHOT.jar
+
+env_variables:
+  SPRING_PROFILES_ACTIVE: "prod"
