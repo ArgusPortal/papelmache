@@ -26,32 +26,33 @@ Planejamento e design: Utilizando um template disponibilizado pela empresa Solid
  - HTML, CSS, JavaScript: Tecnologias para a criação e estilização das páginas web.
  - IntelliJ IDEA: IDE utilizada para o desenvolvimento do projeto.
 A estrutura básica do projeto foi a seguinte:
-
-    papelmache-landingpage/
-    ├── src/
-    │   ├── main/
-    │   │   ├── java/
-    │   │   │   └── com/
-    │   │   │       └── papelmache/
-    │   │   │           ├── PapelmacheApplication.java
-    │   │   │           └── controller/
-    │   │   │               └── HomeController.java
-    │   │   ├── resources/
-    │   │   │   ├── static/
-    │   │   │   │   ├── css/
-    │   │   │   │   │   └── style.css
-    │   │   │   │   └── js/
-    │   │   │   │       └── script.js
-    │   │   │   ├── templates/
-    │   │   │   │   └── index.html
-    │   │   │   └── application.properties
-    │   ├── test/
-    │   │   └── java/
-    │   │       └── com/
-    │   │           └── papelmache/
-    │   │               └── PapelmacheApplicationTests.java
-    ├── pom.xml
-    └── README.md 
+ ```
+		papelmache-landingpage/
+		├── src/
+		│   ├── main/
+		│   │   ├── java/
+		│   │   │   └── com/
+		│   │   │       └── papelmache/
+		│   │   │           ├── PapelmacheApplication.java
+		│   │   │           └── controller/
+		│   │   │               └── HomeController.java
+		│   │   ├── resources/
+		│   │   │   ├── static/
+		│   │   │   │   ├── css/
+		│   │   │   │   │   └── style.css
+		│   │   │   │   └── js/
+		│   │   │   │       └── script.js
+		│   │   │   ├── templates/
+		│   │   │   │   └── index.html
+		│   │   │   └── application.properties
+		│   ├── test/
+		│   │   └── java/
+		│   │       └── com/
+		│   │           └── papelmache/
+		│   │               └── PapelmacheApplicationTests.java
+		├── pom.xml
+		└── README.md 
+``` 	
 
 - **PapelmacheApplication.java**: Classe principal da aplicação Spring Boot.
 - **HomeController.java**: Controlador principal mapeando a URL raiz para a página index.html.
