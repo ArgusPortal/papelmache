@@ -68,3 +68,33 @@ A estrutura básica do projeto foi a seguinte:
 - **Integração com WhatsApp**: Uma das funcionalidades implementadas foi a inserção de links nos botões do site que redirecionam os usuários para uma conversa no WhatsApp. Esta funcionalidade permite que os clientes entrem em contato diretamente com um atendente da gráfica, facilitando a comunicação e o atendimento. A integração foi realizada utilizando links diretos para o WhatsApp Web.
 
 - A aplicação foi hospedada no Google Cloud e pode ser acessada pelo link: https://papelmache.uc.r.appspot.com/
+
+- Implementação Técnica:
+A seguir, estão os detalhes técnicos dos comandos e configurações utilizados durante o processo de implantação no Google Cloud:
+
+**Autenticação e Configuração do Projeto**:
+```
+gcloud auth login
+gcloud config set project papelmache
+```
+**Configuração do app.yaml para Google App Engine**:
+```
+runtime: java11
+entrypoint: java -jar target/papelmache-0.0.1-SNAPSHOT.jar
+env_variables:
+SPRING_PROFILES_ACTIVE: "prod"
+```
+**Deploy da Aplicação**:
+```
+gcloud app deploy
+gcloud app browse
+```
+O arquivo app.yaml especifica o runtime Java 11, o comando de entrada para iniciar a aplicação e as variáveis de ambiente necessárias para o perfil de produção. A implantação foi realizada utilizando o comando gcloud app deploy, que carregou os arquivos para o Google Cloud Storage e iniciou a aplicação no Google App Engine.
+
+**Benefícios do Uso da Cloud**:
+
+- **Escalabilidade**: O Google App Engine permite que a aplicação escale automaticamente com base na demanda, garantindo que o site permaneça responsivo mesmo em períodos de alto tráfego.
+- **Custos**: A utilização de serviços PaaS (Platform as a Service) como o Google App Engine pode reduzir os custos operacionais, já que não há necessidade de gerenciar infraestrutura física.
+- **Segurança**: A infraestrutura da Google oferece segurança robusta, incluindo proteção contra DDoS e conformidade com padrões de segurança como ISO/IEC 27001.
+- **Desempenho**: O uso da nuvem melhora o desempenho da aplicação, oferecendo tempos de resposta mais rápidos e alta disponibilidade.
+- **Manutenção**: A manutenção e atualização do ambiente são gerenciadas pela Google, permitindo que a equipe da gráfica se concentre no desenvolvimento e aprimoramento de funcionalidades.
